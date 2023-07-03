@@ -11,13 +11,13 @@ def main():
         choice = input("Enter your choice (1-4): ")
         
         if choice == "1":
-            
+            pass
             
         elif choice == "2":
-            
+            pass
             
         elif choice == "3":
-            
+            pass
             
         elif choice == "4":
             # Create an instance of the Registration class

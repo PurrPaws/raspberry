@@ -1,24 +1,27 @@
 import requests
 from simulated_models.serving import Serving
+from utils.datetime_utils import DateTimeUtils
 
 class FeederRefillInteraction:
     def __init__(self, api_url):
         self.api_url = api_url
         self.serving = Serving()
     
-    def send_feeder_refill_payload(self,  datetime):
+    def send_feeder_refill_payload(self):
         #Calculate the weight difference using the Serving class
         self.serving.serving_portion()
         weight_difference = self.serving.get_weight_difference()
         
+        current_datetime = DateTimeUtils.get_current_datetime()
+    
         payload = {
+            "token":
             "tank": {
                 "state": True,
-                "datetime": datetime
             },
             "serving": {
                 "postAmountChange": weight_difference,
-                "datetime": datetime
+                "datetime": current_datetime
             }
         }
         

@@ -8,3 +8,6 @@ class DateTimeUtils:
         target_datetime = base_date + timedelta(minutes=minutes)
         formatted_time = target_datetime.strftime("%H:%M")
         return formatted_time
+    @staticmethod
+    def get_current_datetime():
+        return datetime.now()
