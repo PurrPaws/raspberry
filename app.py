@@ -5,7 +5,7 @@ from routes import schedule, pairing, config
 app = Flask(__name__)
 
 app.route('/schedule', methods=['GET'])(schedule.receive_data)
-app.route('/pairing', methods=['POST'])(pairing.send_data)
+app.route('/pairing', methods=['POST'])(pairing.register_pet)
 app.route('/config', methods=['POST'])(config.register_token)
 
 if __name__ == '__main__':
