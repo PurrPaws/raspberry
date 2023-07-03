@@ -1,3 +1,2 @@
 SN=F01AZEOINA787
-PW=StayingAliveStayingAliveHaHaHaHaHaStayingAlivetoken=123456789
-token=
+PW=StayingAliveStayingAliveHaHaHaHaHaStayingAlive
