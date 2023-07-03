@@ -1,6 +1,6 @@
 # routes/schedule.py
 from flask import request
-from utils.datetime_utils import convert_integer_to_datetime
+from utils.datetime_utils import DateTimeUtils
 
 def receive_data():
     received_json_data = request.get_json()
@@ -14,7 +14,7 @@ def receive_data():
         for item in schedule:
             amount = item['amount']
             minutes = item['time']
-            date_time = convert_integer_to_datetime(minutes)
+            date_time = DateTimeUtils.convert_integer_to_datetime(minutes)
             file.write(f"{date_time}-{amount}\n")
     
     return 'OK'
