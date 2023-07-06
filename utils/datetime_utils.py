@@ -10,4 +10,6 @@ class DateTimeUtils:
         return formatted_time
     @staticmethod
     def get_current_datetime():
-        return datetime.now()
+        current_datetime = datetime.now()
+        string_formatted_datetime = current_datetime.strftime("%Y-%m-%d %H:%M:%S")
+        return string_formatted_datetime

@@ -1,10 +1,15 @@
 import requests
+from functionality.simulated_models.scales import Scales
+from utils.datetime_utils import DateTimeUtils
+from utils.token_utils import Token
 
-class RefillInteraction:
+class Refill_Interaction:
     def __init__(self, api_url):
-        self.api_url = api_url
+        self.api_url = api_url + "refill"
+        self.scales = Scales()
     
-    def send_refill_payload(self, refill_amount, datetime):
+    def refill_tank(self):
+        self.refill.get_refill_amount()
         payload = {
             "refill": {
                 "refillAmountSave": refill_amount,
